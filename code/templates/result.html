@@ -1,0 +1,31 @@
+<!-- result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction Result</title>
+  <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  >
+</head>
+<body class="bg-light">
+  <div class="container mt-5">
+    <h1>Prediction Result</h1>
+    <p>The most likely diagnosis is: 
+      <strong class="text-success">{{ prediction }}</strong>
+    </p>
+    <img 
+      src="{{ url_for('uploaded_file', filename=image_url) }}" 
+      alt="Uploaded Image" 
+      style="max-width:400px;" 
+      class="img-thumbnail mb-3"
+    >
+    <br>
+    <a href="{{ url_for('index') }}" class="btn btn-secondary">Upload another image</a>
+  </div>
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+  </script>
+</body>
+</html>
