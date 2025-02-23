@@ -27,7 +27,7 @@ lesion_type_dict = {
     6: 'Vascular lesions'
 }
 
-img_height, img_width = 224, 224
+img_width, img_height = 100, 75
 
 def preprocess_image(image_path):
     # Open the image, resize it and scale pixel values
